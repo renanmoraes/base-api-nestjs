@@ -1,5 +1,5 @@
 import * as mongoose from 'mongoose';
-import defaultFilds from '../../@defaultFildMongoose/default.schemas';
+import defaultFilds from '../../@defaultFieldMongoose/default.schemas';
 
 export const UserSchema = new mongoose.Schema({
     name: { type: String, unique: true, required: true },

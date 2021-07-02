@@ -1,1 +1,1 @@
-declare type UserType = "E" | "F" | "A"; 
+declare type UserType = "E" | "F" | "A";

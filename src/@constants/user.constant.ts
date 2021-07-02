@@ -1,0 +1,1 @@
+export const UserTypeArray = ["E", "F", "A"]
