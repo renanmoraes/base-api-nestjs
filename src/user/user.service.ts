@@ -25,7 +25,7 @@ export class UserService {
         return await this.userModel.find().exec();
     }
 
-    async getUser(_id: string): Promise<User> {
+    async getUserById(_id: string): Promise<User> {
         const user = await this.userModel.findById(_id).exec();
         if (!user) {
             throw new NotFoundException(`Usuário com identificador ${_id} não encontrado`)

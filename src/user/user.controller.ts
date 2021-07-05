@@ -21,13 +21,13 @@ export class UserController {
     }
     
     @Get()
-    async getAllUser(): Promise<User | User[]> {
+    async getAllUser(): Promise<User[]> {
         return await this.userService.getAllUser()
     }
     
     @Get(':_id')
-    async getUser(@Param('_id') _id: string): Promise<User | User[]> {
-        return await this.userService.getUser(_id)
+    async getUserById(@Param('_id') _id: string): Promise<User> {
+        return await this.userService.getUserById(_id)
     }
     
     @Delete(':_id')

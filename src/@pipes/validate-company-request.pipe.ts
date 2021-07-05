@@ -3,7 +3,6 @@ import { ArgumentMetadata, BadRequestException, PipeTransform } from "@nestjs/co
 export class ValidateCompanyRequestPipe implements PipeTransform {
     transform(value: any, metadata: ArgumentMetadata) {
         if (!value.hasOwnProperty('idCompany')) {
-            console.log(metadata)
             throw new BadRequestException(`É necessário informar a propriedade idCompany no ${metadata.type} da requisição.`)
         }
         return value;
