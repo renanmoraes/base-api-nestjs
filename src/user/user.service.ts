@@ -1,15 +1,11 @@
 import { Injectable, Logger, NotFoundException } from '@nestjs/common';
 import { UserDTO } from './dto/user.dto';
 import { User } from './interfaces/user.interface';
-import * as bcrypt from 'bcrypt';
 import { InjectModel } from '@nestjs/mongoose';
-import { Model, Schema } from 'mongoose';
+import { Model } from 'mongoose';
 
 @Injectable()
 export class UserService {
-    private readonly logger = new Logger(UserService.name)
-    private users: User[] = [];
-
     constructor(@InjectModel('User') private readonly userModel: Model<User>) { }
 
     async createUser(user: UserDTO): Promise<User> {

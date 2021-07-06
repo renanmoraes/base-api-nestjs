@@ -4,5 +4,5 @@ export interface Group {
     readonly _id: string;
     readonly name: string;
     readonly description: string;
-    readonly permissions: Array<Permission>
+    readonly permissions: Array<String>
 }
