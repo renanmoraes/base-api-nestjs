@@ -1,4 +1,5 @@
 import { IsArray, IsNotEmpty, IsString } from 'class-validator'
+import { Permission } from 'src/permission/entities/permission.interface';
 export class GroupDTO {
     @IsString()
     @IsNotEmpty()
@@ -8,5 +9,5 @@ export class GroupDTO {
     readonly description: string;
 
     @IsArray()
-    readonly permissions: Array<String>
+    readonly permissions: Array<Permission>
 }

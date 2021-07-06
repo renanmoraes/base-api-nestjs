@@ -14,5 +14,9 @@ export const UserSchema = new mongoose.Schema({
     ],
     sign: { type: String },
     type: { type: String },
+    idCompany: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'Company'
+    },
     ...defaultFilds
 }, { timestamps: true , collection: 'User'});

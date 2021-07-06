@@ -1,8 +1,8 @@
 import { Body, Controller, Delete, Get, Param, Post, Put, UsePipes, ValidationPipe } from '@nestjs/common';
-import { ValidateCompanyRequestPipe } from 'src/@pipes/validate-company-request.pipe';
+import { ValidateCompanyRequestPipe } from 'src/common/pipes/validate-company-request.pipe';
 import { GroupDTO } from './dto/group.dto';
 import { GroupService } from './group.service';
-import { Group } from './interfaces/group.interface';
+import { Group } from './entities/group.interface';
 
 @Controller('api/v1/group')
 export class GroupController {

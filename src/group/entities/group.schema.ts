@@ -12,5 +12,9 @@ export const GroupSchema = new mongoose.Schema({
             required: false
         }
     ],
+    idCompany: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'Company'
+    },
     ...defaultFilds
 }, { timestamps: true , collection: 'Group'});

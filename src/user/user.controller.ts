@@ -1,7 +1,7 @@
 import { Body, Controller, Delete, Get, Param, Post, Put, Query, UsePipes, ValidationPipe } from '@nestjs/common';
-import { ValidateCompanyRequestPipe } from 'src/@pipes/validate-company-request.pipe';
+import { ValidateCompanyRequestPipe } from 'src/common/pipes/validate-company-request.pipe';
 import { UserDTO } from './dto/user.dto';
-import { User } from './interfaces/user.interface';
+import { User } from './entities/user.interface';
 import { UserService } from './user.service';
 
 @Controller('api/v1/user')

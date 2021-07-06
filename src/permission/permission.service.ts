@@ -2,7 +2,7 @@ import { Injectable, NotFoundException } from '@nestjs/common';
 import { InjectModel } from '@nestjs/mongoose';
 import { Model } from 'mongoose';
 import { PermissionDTO } from './dto/permission.dto';
-import { Permission } from './interfaces/permission.interface';
+import { Permission } from './entities/permission.interface';
 
 @Injectable()
 export class PermissionService {
@@ -18,11 +18,15 @@ export class PermissionService {
     }
 
     async getAllPermission(): Promise<Permission[]> {
-        return await this.permissionModel.find().exec();
+        return await this.permissionModel.find()
+            .populate('idCompany')
+            .exec();
     }
 
     async getPermissionById(_id: string): Promise<Permission> {
-        const permission = await this.permissionModel.findById(_id).exec();
+        const permission = await this.permissionModel.findById(_id)
+            .populate('idCompany')
+            .exec();
         if (!permission) {
             throw new NotFoundException(`Permissão com identificador ${_id} não encontrado`)
         }

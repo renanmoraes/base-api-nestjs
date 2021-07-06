@@ -2,7 +2,7 @@ import { Injectable, NotFoundException } from '@nestjs/common';
 import { InjectModel } from '@nestjs/mongoose';
 import { Model } from 'mongoose';
 import { GroupDTO } from './dto/group.dto';
-import { Group } from './interfaces/group.interface';
+import { Group } from './entities/group.interface';
 
 @Injectable()
 export class GroupService {

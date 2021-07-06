@@ -7,10 +7,10 @@ export default {
     },
     userCreated: {
         type: mongoose.Schema.Types.ObjectId,
-        ref: 'Company'
+        ref: 'User'
     },
     userLastUpdated: {
         type: mongoose.Schema.Types.ObjectId,
-        ref: 'Company'
+        ref: 'User'
     }
 }

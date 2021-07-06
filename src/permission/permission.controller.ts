@@ -1,7 +1,7 @@
 import { Body, Controller, Delete, Get, Param, Post, Put, UsePipes, ValidationPipe } from '@nestjs/common';
-import { ValidateCompanyRequestPipe } from 'src/@pipes/validate-company-request.pipe';
+import { ValidateCompanyRequestPipe } from 'src/common/pipes/validate-company-request.pipe';
 import { PermissionDTO } from './dto/permission.dto';
-import { Permission } from './interfaces/permission.interface';
+import { Permission } from './entities/permission.interface';
 import { PermissionService } from './permission.service';
 
 @Controller('api/v1/permission')
